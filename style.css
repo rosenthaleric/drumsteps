@@ -177,6 +177,11 @@ html, body {
   }
 
   @media screen and (max-height: 400px), screen and (max-width: 800px) {
+    html, body {
+        width: auto !important;
+        overflow-x: hidden !important;
+    }
+    
     .container {
         display: none;
     }
