@@ -1,4 +1,5 @@
 html, body {
+    width: 100%;
     padding: 0;
     margin: 0;
     font-family: Lucida Console;
@@ -175,7 +176,7 @@ html, body {
       display: none;
   }
 
-  @media only screen and (max-height: 400px), only screen and (max-width: 800px) {
+  @media screen and (max-height: 400px), screen and (max-width: 800px) {
     .container {
         display: none;
     }

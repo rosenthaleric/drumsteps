@@ -59,8 +59,8 @@
 
     let slider = document.getElementById("myRange");
     let output = document.getElementsByClassName("number")[0];
-    slider.value = 100;
-    Tone.Transport.bpm.value = 100;
+    slider.value = 120;
+    Tone.Transport.bpm.value = 120;
     output.innerHTML = slider.value;
     slider.oninput = () => {
         output.innerHTML = slider.value;
