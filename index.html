@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>drumsteps</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="build/favicon.png">
+    <script src="build/Tone.js" defer></script>
+    <script src="build/proton.min.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <p class="drumsteps">drumsteps</p>
+        <p class="number"></p>
+        <p class="bpm">bpm</p>
+        <p class="button"></p>
+        <div class="slidecontainer">
+            <input type="range" min="40" max="180" value="80" class="slider" id="myRange">
+        </div>
+        <div class="positioner">
+            <div class="wrapper">
+                <canvas id="backgroundCanvas" width="800" height="119"></canvas>
+                <canvas id="liveTick" width="800" height="119"></canvas>
+                <canvas id="vertOverlayCanvas" width="800" height="119"></canvas>
+                <canvas id="instrumentCanvas" width="800" height="119"></canvas>
+                <canvas id="rectCanvas" width="800" height="119"></canvas>
+            </div>
+        </div>
+        <p class="author">Eric Rosenthal</p>
+        <p class="info"></p>
+    </div>
+    <canvas id="particleCanvas"></canvas>
+    <p class="display">Oops, this resolution is not supported. Sorry :(</p>
+    <br/>
+</body>
+
+</html>
