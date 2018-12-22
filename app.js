@@ -319,24 +319,26 @@
             22, 23, 24, 25, 26, 27, 28, 29, 30, 31], "32n");
 
     playButton.onclick = () => {
-        playButton.classList.toggle("paused");
-        if (!playSwitch) {
-            Tone.Transport.start();
-            loop.start();
-        }
-        else {
-            Tone.Transport.stop();
-            loop.stop();
-
-            let i = -1, r;
-            while (r = liveTickRects[++i]) {
-                liveTickCtx.beginPath();
-                liveTickCtx.rect(r.x, r.y, r.w, r.h);
-                liveTickCtx.clearRect(r.x, r.y, r.w, r.h);
-                r.isDrawn = false;
+        Tone.context.resume().then(() => {
+            playButton.classList.toggle("paused");
+            if (!playSwitch) {
+                    Tone.Transport.start();
+                    loop.start();
             }
-        }
-        playSwitch = !playSwitch;
+            else {
+                Tone.Transport.stop();
+                loop.stop();
+
+                let i = -1, r;
+                while (r = liveTickRects[++i]) {
+                    liveTickCtx.beginPath();
+                    liveTickCtx.rect(r.x, r.y, r.w, r.h);
+                    liveTickCtx.clearRect(r.x, r.y, r.w, r.h);
+                    r.isDrawn = false;
+                }
+            }
+            playSwitch = !playSwitch;
+        });
     }
 
     // create different particle emitter for each instrument
