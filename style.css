@@ -176,6 +176,36 @@ html, body {
       display: none;
   }
 
+  @-moz-document url-prefix() {
+    .author {
+        top: 86.5px;
+    }
+    
+    .info {
+        top: 70px;
+    }
+    
+    .bpm {
+        top: -5px;
+    }
+    
+    .number {
+        top: 25px;    
+    }
+    
+    .slidecontainer {
+        position: relative;
+        width: 300px;
+        left: 100px;
+        bottom: 40px;
+        margin: auto;
+    }
+    
+    .button {
+        top: 122px;
+      }
+  }
+
   @media screen and (max-height: 400px), screen and (max-width: 800px) {
     html, body {
         width: auto !important;
